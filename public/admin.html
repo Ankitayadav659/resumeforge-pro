@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="/img/logo.svg" type="image/svg+xml">
+  <script src="/js/theme.js?v={{V}}"></script>
+  <title>Admin — ResumeForge Pro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/site.css?v={{V}}">
+  <link rel="stylesheet" href="/css/admin.css?v={{V}}">
+</head>
+<body>
+  <header class="site-nav">
+    <div class="container">
+      <a class="brand" href="/"><span class="logo">RF</span><div><b>ResumeForge Pro</b><small>Admin</small></div></a>
+      <nav>
+        <button class="theme-btn" data-theme-toggle title="Switch light / dark mode" aria-label="Switch light or dark mode"><span class="t-light">🌙</span><span class="t-dark">☀️</span></button>
+        <a class="btn" href="/dashboard">My resumes</a>
+        <span id="userSlot"></span>
+      </nav>
+    </div>
+  </header>
+  <main class="container admin">
+    <div id="loading" class="loader"><div class="spinner"></div>Loading…</div>
+    <div id="content" hidden>
+      <div class="adm-head"><h1>Business overview</h1><button class="btn sm" id="refresh">↻ Refresh</button></div>
+      <section class="kpis" id="kpis"></section>
+      <section class="card chart-card"><h2>Sign-ups — last 30 days</h2><div class="bars" id="bars"></div></section>
+      <section class="card">
+        <div class="tbl-head"><h2>Users</h2><input id="q" type="search" placeholder="Search name or email…" aria-label="Search users"></div>
+        <div class="tbl-wrap"><table class="tbl"><thead><tr><th>User</th><th>Plan</th><th>Resumes</th><th>Paid</th><th>Joined</th><th>Last login</th><th></th></tr></thead><tbody id="users"></tbody></table></div>
+      </section>
+      <section class="card">
+        <div class="tbl-head"><h2>Messages</h2></div>
+        <div id="messages"></div>
+      </section>
+    </div>
+  </main>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="/js/data.js?v={{V}}"></script>
+  <script src="/js/api.js?v={{V}}"></script>
+  <script src="/js/admin.js?v={{V}}"></script>
+</body>
+</html>

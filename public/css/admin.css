@@ -1,0 +1,30 @@
+.admin { padding-top: 30px; padding-bottom: 60px; display: block; }
+.admin #content { display: grid; gap: 18px; }
+.admin #content[hidden] { display: none; }
+.adm-head { display: flex; justify-content: space-between; align-items: center; }
+.adm-head h1 { font-size: 26px; }
+.kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.kpi { padding: 16px 18px; }
+.kpi span { display: block; font-size: 12px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .05em; }
+.kpi b { display: block; font-size: 26px; margin: 4px 0 2px; letter-spacing: -0.02em; }
+.kpi small { color: var(--muted); font-size: 12.5px; }
+.chart-card, .admin section.card { padding: 18px 20px; }
+.admin h2 { font-size: 16px; margin-bottom: 12px; }
+.bars { display: grid; grid-template-columns: repeat(30, 1fr); gap: 4px; height: 120px; align-items: end; }
+.bar-col { height: 100%; display: flex; align-items: flex-end; }
+.bar-col i { display: block; width: 100%; min-height: 2px; background: linear-gradient(180deg, var(--brand), #7c4ddb); border-radius: 4px 4px 0 0; }
+.tbl-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 10px; flex-wrap: wrap; }
+.tbl-head input { border: 1px solid var(--line-2); border-radius: 9px; padding: 8px 12px; background: var(--surface); min-width: 240px; }
+.tbl-wrap { overflow-x: auto; }
+.tbl { width: 100%; border-collapse: collapse; font-size: 14px; }
+.tbl th, .tbl td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.tbl th { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+.acts { white-space: nowrap; }
+.acts .btn { margin-left: 4px; }
+.btn.danger { color: var(--bad); }
+.msg { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; margin-bottom: 8px; }
+.msg.done { opacity: .6; }
+.msg-head { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-bottom: 6px; font-size: 14px; }
+.msg-head .btn, .msg-head .badge { margin-left: auto; }
+.msg p { color: var(--ink-2); font-size: 14px; }
+@media (max-width: 900px) { .kpis { grid-template-columns: repeat(2, 1fr); } .bars { gap: 2px; } }

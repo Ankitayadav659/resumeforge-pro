@@ -1,0 +1,48 @@
+/* Account settings */
+html { scroll-behavior: smooth; }
+.settings { padding-top: 36px; padding-bottom: 80px; }
+.page-head { margin-bottom: 26px; }
+.page-head h1 { font-size: 28px; letter-spacing: -0.02em; margin-bottom: 6px; }
+.set-grid { display: grid; grid-template-columns: 220px 1fr; gap: 28px; align-items: start; }
+.set-nav { position: sticky; top: 90px; display: grid; gap: 2px; }
+.set-nav a { color: var(--ink-2); padding: 9px 12px; border-radius: 9px; font-weight: 500; font-size: 14.5px; text-decoration: none !important; }
+.set-nav a:hover { background: var(--hover); }
+.set-nav a.on { background: var(--surface); color: var(--brand); box-shadow: var(--shadow-sm); font-weight: 600; }
+.set-main { display: grid; gap: 18px; max-width: 760px; }
+.set-card { padding: 26px; scroll-margin-top: 90px; }
+.set-card h2 { font-size: 18px; margin-bottom: 6px; }
+.set-card > .muted { margin-bottom: 18px; font-size: 14px; }
+.set-card form { display: grid; gap: 14px; }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.actions { display: flex; justify-content: flex-end; }
+.actions.left { justify-content: flex-start; margin-bottom: 10px; }
+.danger-zone { border-color: #fecaca; }
+.danger-zone h2 { color: var(--bad); }
+.btn.danger { background: var(--bad); border-color: var(--bad); color: #fff; }
+.btn.danger:hover { background: #b91c1c; }
+.danger-text { color: var(--bad) !important; }
+.ai-state { display: flex; gap: 12px; padding: 14px; border-radius: 11px; margin-top: 10px; }
+.ai-state .dot { width: 10px; height: 10px; border-radius: 50%; margin-top: 6px; flex-shrink: 0; }
+.ai-state.on { background: var(--ok-50); border: 1px solid #a7f3d0; }
+.ai-state.on .dot { background: var(--ok); box-shadow: 0 0 0 4px #d1fae5; }
+.ai-state.off { background: var(--surface-2); border: 1px solid var(--line); }
+.ai-state.off .dot { background: var(--muted-2); }
+.ai-state p { font-size: 13.5px; margin-top: 4px; }
+.bill-plan { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 16px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface-2); margin: 10px 0 8px; flex-wrap: wrap; }
+.bill-plan.pro { border-color: #f5c06b; background: linear-gradient(135deg, var(--surface), var(--orange-50)); }
+.bill-plan p { margin-top: 8px; font-size: 14.5px; }
+.bill-h { font-size: 15px; margin: 20px 0 8px; }
+.bill-tbl { width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 12px; }
+.bill-tbl th, .bill-tbl td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); }
+.bill-tbl th { font-size: 12px; color: var(--muted); text-transform: uppercase; }
+.mono { font-family: ui-monospace, Consolas, monospace; font-size: 12.5px; }
+.quota { margin-top: 16px; }
+.q-head { display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 6px; }
+.quota .bar { height: 8px; background: var(--track); border-radius: 9px; overflow: hidden; margin-bottom: 6px; }
+.quota .bar i { display: block; height: 100%; background: linear-gradient(90deg, var(--brand), #7c4ddb); }
+@media (max-width: 800px) {
+  .set-grid { grid-template-columns: 1fr; }
+  .set-nav { position: static; display: flex; overflow-x: auto; }
+  .set-nav a { white-space: nowrap; }
+  .row2 { grid-template-columns: 1fr; }
+}

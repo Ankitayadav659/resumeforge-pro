@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="/img/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/img/icon-180.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <script src="/js/theme.js?v={{V}}"></script>
+  <title>Sign in — ResumeForge Pro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/site.css?v={{V}}">
+  <link rel="stylesheet" href="/css/auth.css?v={{V}}">
+</head>
+<body>
+  <div class="auth">
+    <aside class="auth-side">
+      <a class="brand light" href="/"><span class="logo">RF</span><div><b>ResumeForge Pro</b><small>Recruiter-grade resumes</small></div></a>
+      <div class="side-copy">
+        <h2>Write the resume recruiters at top companies expect.</h2>
+        <ul>
+          <li><b>Recruiter Score</b><span>A 14-point audit of your resume that updates as you type</span></li>
+          <li><b>Job-description match</b><span>See the keywords ATS filters will search for</span></li>
+          <li><b>Fresher, Experienced &amp; Executive modes</b><span>Section order and guidance for your career stage</span></li>
+          <li><b>PDF, Word, plain text &amp; share links</b><span>Ready for any portal or recruiter</span></li>
+        </ul>
+      </div>
+      <p class="side-foot">Your password is hashed and never stored in plain text.</p>
+    </aside>
+
+    <main class="auth-main">
+      <button class="theme-btn auth-theme" data-theme-toggle title="Switch light / dark mode" aria-label="Switch light or dark mode"><span class="t-light">🌙</span><span class="t-dark">☀️</span></button>
+      <div class="auth-card">
+        <div class="auth-tabs" role="tablist">
+          <button type="button" data-mode="login" role="tab">Log in</button>
+          <button type="button" data-mode="signup" role="tab">Create account</button>
+        </div>
+        <h1 id="authTitle">Welcome back</h1>
+        <p class="muted" id="authSub">Log in to continue working on your resumes.</p>
+
+        <form id="authForm" novalidate>
+          <div id="formError" class="form-error" hidden></div>
+          <div id="formOk" class="form-ok" hidden></div>
+          <label class="field" data-show="signup"><span>Full name</span><input name="name" type="text" autocomplete="name" placeholder="Priya Mehta"></label>
+          <label class="field" data-show="login signup forgot"><span>Email</span><input name="email" type="email" autocomplete="email" placeholder="you@example.com"></label>
+          <label class="field" data-show="login signup reset"><span class="pw-label"><span id="pwFieldLabel">Password</span><a href="/forgot" data-switch="forgot" data-show="login" class="forgot-link">Forgot password?</a></span>
+            <div class="pw-wrap"><input name="password" type="password" autocomplete="current-password" placeholder="At least 8 characters">
+              <button type="button" class="pw-toggle" id="pwToggle" aria-label="Show password">Show</button></div>
+          </label>
+          <label class="field" data-show="reset"><span>Confirm new password</span><input name="confirm" type="password" autocomplete="new-password" placeholder="Type it again"></label>
+          <div class="pw-meter" data-show="signup reset"><i id="pwBar"></i><span id="pwLabel">Use 8+ characters with a mix of letters, numbers and symbols</span></div>
+          <button class="btn primary lg block" type="submit" id="authBtn">Log in</button>
+        </form>
+        <p class="switch muted" id="authSwitch"></p>
+      </div>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="/js/api.js?v={{V}}"></script>
+  <script src="/js/auth.js?v={{V}}"></script>
+</body>
+</html>

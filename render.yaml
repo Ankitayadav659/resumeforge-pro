@@ -1,0 +1,48 @@
+# One-click deploy on Render.com (Blueprint). See DEPLOY.md.
+services:
+  - type: web
+    name: resumeforge-pro
+    runtime: docker
+    plan: starter            # paid instance: required for the persistent disk below
+    region: singapore        # closest Render region to India
+    healthCheckPath: /api/health
+    disk:
+      name: resumeforge-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: TRUST_PROXY
+        value: "1"
+      - key: COOKIE_SECURE
+        value: "1"
+      - key: RESUMEFORGE_DB
+        value: /data/resumeforge.db
+      # --- fill these in on Render when asked ---
+      - key: APP_URL                 # e.g. https://www.yourdomain.com (no trailing slash)
+        sync: false
+      - key: ADMIN_EMAILS            # your login email(s), comma-separated -> unlocks /admin
+        sync: false
+      - key: SUPPORT_EMAIL           # shown on Contact / legal pages, receives contact-form mail
+        sync: false
+      - key: BUSINESS_NAME           # legal name shown in Terms / Privacy / footer
+        sync: false
+      - key: ANTHROPIC_API_KEY       # AI features
+        sync: false
+      - key: RAZORPAY_KEY_ID         # payments (rzp_test_... first, then rzp_live_...)
+        sync: false
+      - key: RAZORPAY_KEY_SECRET
+        sync: false
+      - key: RAZORPAY_WEBHOOK_SECRET
+        sync: false
+      - key: SMTP_HOST               # password-reset emails
+        sync: false
+      - key: SMTP_PORT
+        value: "587"
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASSWORD
+        sync: false
+      - key: SMTP_FROM
+        sync: false

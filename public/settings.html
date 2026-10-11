@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="/img/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/img/icon-180.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <script src="/js/theme.js?v={{V}}"></script>
+  <title>Account settings — ResumeForge Pro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/site.css?v={{V}}">
+  <link rel="stylesheet" href="/css/settings.css?v={{V}}">
+</head>
+<body>
+  <header class="site-nav">
+    <div class="container">
+      <a class="brand" href="/"><span class="logo">RF</span><div><b>ResumeForge Pro</b><small>Recruiter-grade resumes</small></div></a>
+      <nav>
+        <button class="theme-btn" data-theme-toggle title="Switch light / dark mode" aria-label="Switch light or dark mode"><span class="t-light">🌙</span><span class="t-dark">☀️</span></button>
+        <a class="btn" href="/dashboard">←<span class="hide-xs"> My resumes</span></a>
+        <span id="userSlot"></span>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container settings">
+    <div id="loading" class="loader"><div class="spinner"></div>Loading…</div>
+    <div id="content" hidden>
+      <div class="page-head">
+        <h1>Account settings</h1>
+        <p class="muted">Manage your profile, security and data.</p>
+      </div>
+
+      <div class="set-grid">
+        <nav class="set-nav">
+          <a href="#profile" class="on">Profile</a>
+          <a href="#billing">Plan &amp; billing</a>
+          <a href="#security">Password &amp; security</a>
+          <a href="#ai">AI assistant</a>
+          <a href="#data">Your data</a>
+          <a href="#danger" class="danger-text">Delete account</a>
+        </nav>
+
+        <div class="set-main">
+          <section class="card set-card" id="profile">
+            <h2>Profile</h2>
+            <p class="muted">Your name appears in the app. Your email is used to log in and to reset your password.</p>
+            <form id="profileForm" novalidate>
+              <div class="msg" hidden></div>
+              <div class="row2">
+                <label class="field"><span>Full name</span><input name="name" type="text" maxlength="80" autocomplete="name"></label>
+                <label class="field"><span>Email</span><input name="email" type="email" autocomplete="email"></label>
+              </div>
+              <label class="field" id="emailPwRow" hidden><span>Current password (required to change your email)</span><input name="password" type="password" autocomplete="current-password"></label>
+              <div class="actions"><button class="btn primary" type="submit">Save changes</button></div>
+            </form>
+          </section>
+
+          <section class="card set-card" id="billing">
+            <h2>Plan &amp; billing</h2>
+            <div id="billingBox"><div class="spinner"></div></div>
+          </section>
+
+          <section class="card set-card" id="security">
+            <h2>Password &amp; security</h2>
+            <p class="muted">Changing your password signs you out on every other device.</p>
+            <form id="pwForm" novalidate>
+              <div class="msg" hidden></div>
+              <label class="field"><span>Current password</span><input name="current" type="password" autocomplete="current-password"></label>
+              <div class="row2">
+                <label class="field"><span>New password</span><input name="password" type="password" autocomplete="new-password" placeholder="At least 8 characters"></label>
+                <label class="field"><span>Confirm new password</span><input name="confirm" type="password" autocomplete="new-password"></label>
+              </div>
+              <div class="actions"><button class="btn primary" type="submit">Update password</button></div>
+            </form>
+          </section>
+
+          <section class="card set-card" id="ai">
+            <h2>AI assistant</h2>
+            <div id="aiStatus"></div>
+          </section>
+
+          <section class="card set-card" id="data">
+            <h2>Your data</h2>
+            <p class="muted">Download a copy of your account and every resume as a JSON file. You can import resumes back from the dashboard.</p>
+            <div class="actions left"><button class="btn" id="exportBtn">Download all my data</button></div>
+            <p class="small muted" id="memberSince"></p>
+          </section>
+
+          <section class="card set-card danger-zone" id="danger">
+            <h2>Delete account</h2>
+            <p class="muted">This permanently deletes your account, every resume, version history and share links. It cannot be undone.</p>
+            <form id="delForm" novalidate>
+              <div class="msg" hidden></div>
+              <div class="row2">
+                <label class="field"><span>Your password</span><input name="password" type="password" autocomplete="current-password"></label>
+                <label class="field"><span>Type <b>DELETE</b> to confirm</span><input name="confirm" type="text" autocomplete="off"></label>
+              </div>
+              <div class="actions"><button class="btn danger" type="submit">Delete my account permanently</button></div>
+            </form>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="/js/data.js?v={{V}}"></script>
+  <script src="/js/api.js?v={{V}}"></script>
+  <script src="/js/billing.js?v={{V}}"></script>
+  <script src="/js/settings.js?v={{V}}"></script>
+</body>
+</html>

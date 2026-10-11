@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="/img/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/img/icon-180.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <script src="/js/theme.js?v={{V}}"></script>
+  <title>Editor — ResumeForge Pro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/site.css?v={{V}}">
+  <link rel="stylesheet" href="/css/app.css?v={{V}}">
+  <link rel="stylesheet" href="/css/resume.css?v={{V}}">
+</head>
+<body data-view="edit">
+  <header class="topbar no-print">
+    <div class="tb-left">
+      <a class="btn ghost sm back" href="/dashboard" title="Back to my resumes">← <span class="hide-sm">My resumes</span></a>
+      <span class="logo sm-logo">RF</span>
+      <input id="resumeName" class="name-input" type="text" maxlength="120" aria-label="Resume name" value="">
+      <span id="saved" class="saved">Loading…</span>
+    </div>
+    <div class="tb-right">
+      <details class="menu">
+        <summary class="btn sm ai" title="AI tools">✨<span class="hide-sm"> AI Tools ▾</span></summary>
+        <div class="menu-list ai-menu">
+          <button data-action="ai-review"><b>Recruiter review</b><span>Senior recruiter's verdict and top fixes</span></button>
+          <button data-action="ai-tailor"><b>Tailor to a job</b><span>Uses the job description in Recruiter Lens</span></button>
+          <button data-action="cover-letter"><b>Cover letter</b><span>Generate a matching cover letter</span></button>
+          <button data-action="ai-summary-tab"><b>Write my summary</b><span>A recruiter-ready professional summary</span></button>
+        </div>
+      </details>
+      <button class="btn sm hide-md" data-action="cover-letter">✉️ Cover letter</button>
+      <button class="btn sm hide-md" data-action="history" title="Version history">🕘 History</button>
+      <button class="btn sm hide-sm" data-action="share">🔗 Share</button>
+      <details class="menu">
+        <summary class="btn sm" title="Download & export">⬇<span class="hide-sm"> Export ▾</span></summary>
+        <div class="menu-list export-menu">
+          <button data-action="export-pdf"><b>PDF</b><span>One-click download, ATS-readable text</span></button>
+          <button data-action="print-pdf"><b>Print / save via browser</b><span>Pixel-exact copy of the preview</span></button>
+          <button data-action="export-doc"><b>Word (.doc)</b><span>Edit in MS Word or Google Docs</span></button>
+          <button data-action="export-txt"><b>Plain text</b><span>Paste into job-portal forms</span></button>
+          <hr>
+          <button data-action="cover-letter">Cover letter…</button>
+          <button data-action="history">Version history…</button>
+          <button data-action="share">Share link…</button>
+          <button data-action="export-json">Download backup (.json)</button>
+        </div>
+      </details>
+      <button class="btn primary sm" data-action="export-pdf">Download PDF</button>
+      <span id="userSlot"></span>
+    </div>
+  </header>
+
+  <div id="loading" class="loader no-print"><div class="spinner"></div>Opening your resume…</div>
+
+  <main class="layout" id="layout" hidden>
+    <section class="editor no-print">
+      <nav class="tabs" id="tabs"></nav>
+      <div class="editor-body" id="editor"></div>
+    </section>
+
+    <section class="preview">
+      <div class="preview-bar no-print" id="previewBar"></div>
+      <div class="preview-wrap" id="previewWrap">
+        <div class="scaler" id="scaler"><article class="page resume" id="page"></article></div>
+      </div>
+    </section>
+
+    <aside class="lens no-print" id="lens"></aside>
+  </main>
+
+  <nav class="mobile-switch no-print">
+    <button class="on" data-action="view" data-view="edit"><span class="ms-ico">✏️</span>Edit</button>
+    <button data-action="view" data-view="preview"><span class="ms-ico">📄</span>Preview</button>
+    <button data-action="view" data-view="lens"><span class="ms-ico">📊</span><span>Score <b class="ms-badge" id="msScore"></b></span></button>
+  </nav>
+
+  <article class="letter-print" id="letterPrint" aria-hidden="true"></article>
+  <div class="modal-backdrop no-print" id="modal" hidden><div class="modal" id="modalBody"></div></div>
+  <div class="toast no-print" id="toast" role="status"></div>
+
+  <script src="/js/data.js?v={{V}}"></script>
+  <script src="/js/analyzer.js?v={{V}}"></script>
+  <script src="/js/templates.js?v={{V}}"></script>
+  <script src="/js/api.js?v={{V}}"></script>
+  <script src="/js/pdfexport.js?v={{V}}"></script>
+  <script src="/js/billing.js?v={{V}}"></script>
+  <script src="/js/app.js?v={{V}}"></script>
+</body>
+</html>

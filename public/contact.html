@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="/img/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/img/icon-180.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <script src="/js/theme.js?v={{V}}"></script>
+  <title>Contact Us — Support, Billing & Feedback | ResumeForge Pro</title>
+  <meta name="description" content="Questions about your account, a payment or a refund? Contact the ResumeForge Pro team. We usually reply within one business day.">
+  <link rel="canonical" href="{{CANONICAL}}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ResumeForge Pro">
+  <meta property="og:title" content="Contact ResumeForge Pro">
+  <meta property="og:description" content="Support, billing and feedback. We usually reply within one business day.">
+  <meta property="og:url" content="{{CANONICAL}}">
+  <meta property="og:image" content="{{APP_URL}}/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/site.css?v={{V}}">
+  <link rel="stylesheet" href="/css/public.css?v={{V}}">
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "ContactPage", "url": "{{CANONICAL}}", "name": "Contact ResumeForge Pro",
+    "mainEntity": { "@type": "Organization", "name": "{{BUSINESS}}", "url": "{{APP_URL}}/", "email": "{{SUPPORT_EMAIL}}",
+      "contactPoint": { "@type": "ContactPoint", "contactType": "customer support", "email": "{{SUPPORT_EMAIL}}", "availableLanguage": ["English", "Hindi"] } } }
+  </script>
+</head>
+<body>
+  <header class="site-nav">
+    <div class="container">
+      <a class="brand" href="/" aria-label="ResumeForge Pro home"><span class="logo">RF</span><div><b>ResumeForge Pro</b><small>Recruiter-grade resumes</small></div></a>
+      <nav aria-label="Main">
+        <div class="nav-links">
+          <a class="link" href="/ai-resume-builder">AI Resume Builder</a>
+          <a class="link" href="/resume-templates">Templates</a>
+          <a class="link" href="/ats-resume-checker">ATS Checker</a>
+          <a class="link" href="/pricing">Pricing</a>
+        </div>
+        <button class="theme-btn" data-theme-toggle title="Switch light / dark mode" aria-label="Switch light or dark mode"><span class="t-light">🌙</span><span class="t-dark">☀️</span></button>
+        <span class="nav-auth" id="navAuth"><a class="btn ghost" href="/login">Log in</a><a class="btn primary" href="/signup">Get started free</a></span>
+        <details class="mnav"><summary aria-label="Open menu">☰</summary>
+          <div class="mnav-panel">
+            <a href="/ai-resume-builder">AI Resume Builder</a>
+            <a href="/resume-templates">Resume Templates</a>
+            <a href="/ats-resume-checker">ATS Resume Checker</a>
+            <a href="/resume-for-freshers">Resume for Freshers</a>
+            <a href="/cover-letter-generator">Cover Letter Generator</a>
+            <a href="/guides/how-to-write-a-resume">Resume Guide</a>
+            <a href="/pricing">Pricing</a>
+            <a class="btn primary block" href="/signup" data-auth-cta>Get started free</a>
+          </div>
+        </details>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>›</span>Contact</nav>
+        <h1>Contact us</h1>
+        <p class="lead">Questions about your account, a payment, a refund, or an idea to make ResumeForge Pro better? Send us a message and we will usually reply within one business day.</p>
+      </div>
+    </section>
+    <section class="container contact-grid">
+      <form class="card contact-form" id="contactForm" novalidate>
+        <div class="form-ok" id="cOk" hidden>Thanks, your message has been sent. We will reply to your email soon.</div>
+        <div class="form-error" id="cErr" hidden></div>
+        <div class="row2c">
+          <label class="field"><span>Your name</span><input name="name" type="text" maxlength="80" autocomplete="name" required></label>
+          <label class="field"><span>Email</span><input name="email" type="email" autocomplete="email" required></label>
+        </div>
+        <label class="field"><span>Topic</span>
+          <select name="topic"><option>General question</option><option>Billing &amp; payments</option><option>Refund request</option><option>Bug report</option><option>Feature idea</option><option>Partnership</option></select></label>
+        <label class="field"><span>Message</span><textarea name="message" rows="7" maxlength="4000" placeholder="How can we help? For payments, include your Razorpay payment ID." required></textarea></label>
+        <button class="btn primary lg" type="submit" id="cBtn">Send message</button>
+      </form>
+      <aside class="contact-side">
+        <div class="card side-card"><h3>📧 Email</h3><p><a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a></p></div>
+        <div class="card side-card"><h3>💳 Billing &amp; refunds</h3><p>Include the email you signed up with and your Razorpay payment ID. Read our <a href="/refund">refund policy</a>.</p></div>
+        <div class="card side-card"><h3>🔒 Account help</h3><p>Forgot your password? <a href="/forgot">Reset it here</a>. To export or delete your data, open Account settings.</p></div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <a class="brand" href="/"><span class="logo">RF</span><div><b>ResumeForge Pro</b><small>Recruiter-grade resumes</small></div></a>
+          <p>AI resume builder with a live recruiter score, ATS-friendly templates and cover letters, for freshers, professionals and executives.</p>
+        </div>
+        <div><h4>Product</h4><ul>
+          <li><a href="/ai-resume-builder">AI Resume Builder</a></li>
+          <li><a href="/ats-resume-checker">ATS Resume Checker</a></li>
+          <li><a href="/resume-templates">Resume Templates</a></li>
+          <li><a href="/cover-letter-generator">Cover Letter Generator</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+        </ul></div>
+        <div><h4>Resources</h4><ul>
+          <li><a href="/guides/how-to-write-a-resume">How to Write a Resume</a></li>
+          <li><a href="/guides/resume-action-verbs">Resume Action Verbs</a></li>
+          <li><a href="/guides/ats-friendly-resume">ATS-Friendly Resume Guide</a></li>
+          <li><a href="/resume-for-freshers">Resume for Freshers</a></li>
+        </ul></div>
+        <div><h4>Company</h4><ul>
+          <li><a href="/contact">Contact us</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/refund">Refund Policy</a></li>
+        </ul></div>
+      </div>
+      <div class="foot-bottom"><span>© {{YEAR}} {{BUSINESS}}. All rights reserved.</span><span>Made for job seekers in India and worldwide.</span></div>
+    </div>
+  </footer>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="/js/api.js?v={{V}}"></script>
+  <script src="/js/public.js?v={{V}}"></script>
+  <script src="/js/contact.js?v={{V}}"></script>
+</body>
+</html>

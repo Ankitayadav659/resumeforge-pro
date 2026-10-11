@@ -1,0 +1,90 @@
+/* ===== The resume page (shared by preview + print) ===== */
+.resume {
+  --accent: #1f3a5f;
+  --rfont: Calibri, Carlito, 'Segoe UI', Arial, sans-serif;
+  --fs: 10.5pt;
+  font-family: var(--rfont);
+  font-size: var(--fs);
+  line-height: 1.32;
+  color: #1a1a1a;
+  background: #fff;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.resume * { box-sizing: border-box; }
+.resume .r-gap { display: none; }
+
+.r-head { margin-bottom: 0.9em; }
+.r-name { font-size: 2.15em; line-height: 1.1; margin: 0; font-weight: 700; letter-spacing: 0.01em; }
+.r-headline { font-size: 1.08em; font-weight: 600; margin-top: 0.2em; color: #333; }
+.r-contact { font-size: 0.93em; color: #3a3a3a; margin-top: 0.35em; }
+.r-sep { color: #9a9a9a; padding: 0 0.15em; }
+
+.r-sec { margin-top: 0.85em; }
+.r-sec h2 {
+  font-size: 1.02em; text-transform: uppercase; letter-spacing: 0.09em; font-weight: 700;
+  color: var(--accent); margin: 0 0 0.45em; padding-bottom: 0.18em; border-bottom: 1px solid var(--accent);
+}
+.r-entry { margin-bottom: 0.6em; break-inside: avoid; page-break-inside: avoid; }
+.r-entry:last-child { margin-bottom: 0; }
+.r-row { display: flex; justify-content: space-between; gap: 1em; align-items: baseline; }
+.r-row .r-right { text-align: right; white-space: nowrap; flex-shrink: 0; }
+.r-strong { font-weight: 700; }
+.r-sub { color: #333; }
+.r-org { font-style: italic; }
+.r-date { font-weight: 600; color: #333; }
+.r-tech { color: #555; font-style: italic; }
+.r-link { color: #444; }
+.r-score { color: #333; }
+.r-details { color: #333; margin-top: 0.1em; }
+.r-summary { margin: 0; text-align: justify; }
+.r-bullets { margin: 0.25em 0 0; padding-left: 1.15em; }
+.r-bullets li { margin-bottom: 0.18em; padding-left: 0.1em; }
+.r-bullets li::marker { color: var(--accent); }
+.r-compact li { margin-bottom: 0.1em; }
+.r-skill { margin-bottom: 0.18em; }
+.r-skill b { font-weight: 700; }
+
+/* ---- Classic: centered, timeless ---- */
+.tpl-classic .r-head { text-align: center; }
+.tpl-classic .r-name { text-transform: uppercase; letter-spacing: 0.12em; font-size: 1.95em; color: #111; }
+.tpl-classic .r-headline { color: var(--accent); }
+.tpl-classic .r-sec h2 { text-align: left; }
+
+/* ---- Modern: left aligned, accent name ---- */
+.tpl-modern .r-name { color: var(--accent); font-size: 2.3em; letter-spacing: -0.01em; }
+.tpl-modern .r-head { padding-bottom: 0.7em; border-bottom: 2.5px solid var(--accent); }
+.tpl-modern .r-sec h2 { border-bottom: none; padding-bottom: 0; letter-spacing: 0.12em; font-size: 0.98em; }
+.tpl-modern .r-sec h2::after { content: ''; display: block; height: 1px; background: #d5d9df; margin-top: 0.25em; }
+
+/* ---- Executive: header band ---- */
+.tpl-executive .r-head { background: var(--accent); color: #fff; margin: 0 0 1em; padding: 1.15em 1.3em 1em; }
+.tpl-executive .r-name { color: #fff; font-size: 2.3em; letter-spacing: 0.02em; }
+.tpl-executive .r-headline { color: #fff; opacity: 0.95; font-weight: 500; }
+.tpl-executive .r-contact, .tpl-executive .r-sep { color: rgba(255, 255, 255, 0.88); }
+.tpl-executive .r-sec h2 { border-bottom: 2px solid var(--accent); font-size: 1.06em; letter-spacing: 0.06em; color: #111; }
+.tpl-executive .r-sec-achievements .r-bullets li { font-weight: 600; }
+
+/* ---- Compact: side headings ---- */
+.tpl-compact .r-head { border-bottom: 2px solid var(--accent); padding-bottom: 0.6em; }
+.tpl-compact .r-name { font-size: 2em; color: #111; }
+.tpl-compact .r-headline { color: var(--accent); }
+.tpl-compact .r-sec { display: grid; grid-template-columns: 7.6em 1fr; gap: 1em; margin-top: 0.75em; }
+.tpl-compact .r-sec h2 { border: none; padding: 0; margin: 0.05em 0 0; font-size: 0.86em; line-height: 1.3; }
+
+/* ===== Screen-only page chrome ===== */
+@media screen {
+  .page { width: 794px; min-height: 1123px; padding: 14mm 16mm; position: relative; transform-origin: top left; box-shadow: 0 1px 3px rgba(15, 23, 42, .12), 0 12px 32px rgba(15, 23, 42, .12); }
+  .pbreak { position: absolute; left: 0; right: 0; border-top: 2px dashed #e11d48; pointer-events: none; opacity: .55; }
+  .pbreak span { position: absolute; right: 6px; top: -18px; font: 600 10px/1 system-ui, sans-serif; color: #e11d48; background: #fff; padding: 2px 4px; }
+}
+
+/* ===== Print / Save as PDF ===== */
+@page { size: A4; margin: 14mm 16mm; }
+@media print {
+  html, body { background: #fff !important; margin: 0; height: auto; overflow: visible !important; }
+  .no-print, .pbreak { display: none !important; }
+  .layout, .preview, .preview-wrap, .scaler { display: block !important; padding: 0 !important; margin: 0 !important; width: auto !important; height: auto !important; overflow: visible !important; background: none !important; border: 0 !important; }
+  .page { width: auto !important; min-height: 0 !important; padding: 0 !important; box-shadow: none !important; transform: none !important; }
+  .r-sec h2 { break-after: avoid; page-break-after: avoid; }
+}

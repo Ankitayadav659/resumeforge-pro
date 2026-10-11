@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="/img/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/img/icon-180.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <script src="/js/theme.js?v={{V}}"></script>
+  <title>Free AI Resume Builder &amp; ATS Resume Checker | ResumeForge Pro</title>
+  <meta name="description" content="Free AI resume builder with a live ATS score, job-description matching, 4 ATS-friendly templates and one-click PDF. Build a resume recruiters shortlist.">
+  <link rel="canonical" href="{{CANONICAL}}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ResumeForge Pro">
+  <meta property="og:title" content="ResumeForge Pro — Free AI Resume Builder & ATS Checker">
+  <meta property="og:description" content="Write a recruiter-ready resume with AI, check your ATS score live and download an ATS-friendly PDF. Free to start.">
+  <meta property="og:url" content="{{CANONICAL}}">
+  <meta property="og:image" content="{{APP_URL}}/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_IN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ResumeForge Pro — Free AI Resume Builder & ATS Checker">
+  <meta name="twitter:description" content="Write a recruiter-ready resume with AI, check your ATS score live and download an ATS-friendly PDF. Free to start.">
+  <meta name="twitter:image" content="{{APP_URL}}/img/og-image.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/site.css?v={{V}}">
+  <link rel="stylesheet" href="/css/resume.css?v={{V}}">
+  <link rel="stylesheet" href="/css/public.css?v={{V}}">
+  <link rel="stylesheet" href="/css/landing.css?v={{V}}">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "{{APP_URL}}/#organization",
+        "name": "{{BUSINESS}}",
+        "url": "{{APP_URL}}/",
+        "logo": { "@type": "ImageObject", "url": "{{APP_URL}}/img/icon-512.png", "width": 512, "height": 512 },
+        "email": "{{SUPPORT_EMAIL}}"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "{{APP_URL}}/#website",
+        "url": "{{APP_URL}}/",
+        "name": "ResumeForge Pro",
+        "publisher": { "@id": "{{APP_URL}}/#organization" },
+        "inLanguage": "en-IN"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "ResumeForge Pro",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web browser (Windows, macOS, Android, iOS)",
+        "url": "{{APP_URL}}/",
+        "description": "AI resume builder with a live ATS and recruiter score, job-description keyword matching, ATS-friendly templates, cover letters and PDF download.",
+        "offers": [
+          { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "INR" },
+          { "@type": "Offer", "name": "Pro — 1 month", "price": "{{PRICE_1M}}", "priceCurrency": "INR" },
+          { "@type": "Offer", "name": "Pro — 3 months", "price": "{{PRICE_3M}}", "priceCurrency": "INR" },
+          { "@type": "Offer", "name": "Pro — 12 months", "price": "{{PRICE_12M}}", "priceCurrency": "INR" }
+        ],
+        "publisher": { "@id": "{{APP_URL}}/#organization" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Will my resume pass ATS (Applicant Tracking Systems)?", "acceptedAnswer": { "@type": "Answer", "text": "All templates use one column, standard section headings and real text, with no tables, text boxes or images. These are the formats ATS parsers handle best. Paste the job description into the Recruiter Lens to check keyword coverage too." } },
+          { "@type": "Question", "name": "I am a fresher with no work experience. Can I still build a strong resume?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Fresher mode puts Education, Skills and Projects first. It prompts for CGPA, internships, hackathons and leadership roles, and keeps the resume to one page, which is what campus and entry-level recruiters expect." } },
+          { "@type": "Question", "name": "Is ResumeForge Pro free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Free plan includes 3 resumes, all templates, PDF download, the Recruiter Score and 3 AI actions a day. Pro passes add more resumes and AI, with a one-time payment and no auto-renewal." } },
+          { "@type": "Question", "name": "Should I add a photo, date of birth or marital status?", "acceptedAnswer": { "@type": "Answer", "text": "Not for corporate or multinational roles. Large companies avoid these details to reduce bias, and they take up space. Your name, city, phone, email and LinkedIn are enough." } },
+          { "@type": "Question", "name": "Where is my data stored?", "acceptedAnswer": { "@type": "Answer", "text": "On our secure servers. Passwords are hashed and never stored in plain text. Share links are off until you turn them on, and you can export or delete all your data at any time from Account settings." } },
+          { "@type": "Question", "name": "One page or two?", "acceptedAnswer": { "@type": "Answer", "text": "Freshers and anyone with under 5 years of experience should aim for one page. Experienced professionals can use two. Executives may use up to three. The page counter and Recruiter Score warn you when you go over." } }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div id="fileWarn" style="font-family:Segoe UI,Arial,sans-serif;background:#fff7ed;color:#9a3412;border:2px solid #fdba74;padding:16px 20px;margin:16px;border-radius:10px;font-size:16px">
+    <b>This page was opened as a file, so the app cannot work.</b><br>
+    Close this tab, double-click <b>start.bat</b> in the "resume creator app" folder, keep the black window open, and use <b>http://localhost:8000</b>.
+  </div>
+  <header class="site-nav">
+    <div class="container">
+      <a class="brand" href="/" aria-label="ResumeForge Pro home"><span class="logo">RF</span><div><b>ResumeForge Pro</b><small>Recruiter-grade resumes</small></div></a>
+      <nav aria-label="Main">
+        <div class="nav-links">
+          <a class="link" href="/ai-resume-builder">AI Resume Builder</a>
+          <a class="link" href="/resume-templates">Templates</a>
+          <a class="link" href="/ats-resume-checker">ATS Checker</a>
+          <a class="link" href="/pricing">Pricing</a>
+        </div>
+        <button class="theme-btn" data-theme-toggle title="Switch light / dark mode" aria-label="Switch light or dark mode"><span class="t-light">🌙</span><span class="t-dark">☀️</span></button>
+        <span class="nav-auth" id="navAuth"><a class="btn ghost" href="/login">Log in</a><a class="btn primary" href="/signup">Get started free</a></span>
+        <details class="mnav"><summary aria-label="Open menu">☰</summary>
+          <div class="mnav-panel">
+            <a href="/ai-resume-builder">AI Resume Builder</a>
+            <a href="/resume-templates">Resume Templates</a>
+            <a href="/ats-resume-checker">ATS Resume Checker</a>
+            <a href="/resume-for-freshers">Resume for Freshers</a>
+            <a href="/cover-letter-generator">Cover Letter Generator</a>
+            <a href="/guides/how-to-write-a-resume">Resume Guide</a>
+            <a href="/pricing">Pricing</a>
+            <a class="btn primary block" href="/signup" data-auth-cta>Get started free</a>
+          </div>
+        </details>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Free AI resume builder · ATS resume checker</span>
+        <h1>The AI resume builder that gets you <span class="hl">shortlisted</span>, not filtered out.</h1>
+        <p class="lead">ResumeForge Pro helps freshers, working professionals and senior leaders write ATS-friendly resumes that hold a recruiter's attention. It scores every line live against the standards hiring teams at large companies use, and its AI helps you fix them.</p>
+        <div class="cta-row">
+          <a class="btn primary lg cta-main" href="/signup" data-auth-cta>Build my resume — free</a>
+          <a class="btn lg" href="#templates">See templates</a>
+        </div>
+        <ul class="trust">
+          <li><span>✓</span> ATS-safe single-column layouts</li>
+          <li><span>✓</span> Live Recruiter Score</li>
+          <li><span>✓</span> PDF, Word &amp; plain-text export</li>
+        </ul>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hv-page"><div class="mini-page" id="heroResume"></div></div>
+        <div class="float f-score"><div class="fs-ring"><b>92</b></div><div><small>Recruiter Score</small><b>Interview-ready</b></div></div>
+        <div class="float f-jd"><small>Job description match</small><div class="fbar"><i></i></div><b>84% keywords matched</b></div>
+        <div class="float f-fix"><span class="dot"></span><div><small>Suggestion</small><b>“Responsible for…” → “Led…”</b></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="audience">
+    <div class="container">
+      <div class="aud-grid">
+        <div class="aud"><span class="aud-ico">🎓</span><h3>Freshers &amp; students</h3><p>Turn projects, internships and college achievements into proof recruiters trust. Education-first layout, CGPA guidance and one-page fit.</p></div>
+        <div class="aud"><span class="aud-ico">💼</span><h3>Working professionals</h3><p>Rewrite duties into measurable impact. Check every bullet for action verbs, numbers and length, and tailor a copy for each job.</p></div>
+        <div class="aud"><span class="aud-ico">🏛️</span><h3>Senior leaders &amp; executives</h3><p>Career Highlights up front, scope (team, P&amp;L, revenue) made obvious, and an executive template written for boards and search firms.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="features">
+    <div class="container">
+      <div class="sec-head"><span class="eyebrow">Features</span><h2>Everything a recruiter checks, built in</h2><p class="muted">Recruiters skim a resume in seconds before deciding. ResumeForge Pro shows you what they will notice.</p></div>
+      <div class="feat-grid">
+        <div class="feat"><span class="fi">📊</span><h3>Recruiter Score</h3><p>A 14-point audit covering contact details, headline, summary, action verbs, quantified impact, length, clichés, dates and fit for your industry.</p></div>
+        <div class="feat"><span class="fi">🎯</span><h3>Job-description match</h3><p>Paste any job posting. We pull out the keywords ATS systems search for and show which ones your resume is missing.</p></div>
+        <div class="feat"><span class="fi">✨</span><h3>Recruiter Review for bullets</h3><p>Weak openers like "responsible for" and "worked on" are rewritten into strong verbs, with the tense fixed for past roles.</p></div>
+        <div class="feat"><span class="fi">🧱</span><h3>Impact Builder</h3><p>Write bullets with the formula top tech firms recommend: <em>accomplished X, measured by Y, by doing Z</em>.</p></div>
+        <div class="feat"><span class="fi">👁️</span><h3>6-second scan</h3><p>See exactly what a recruiter takes away at first glance: who you are, your current role, years of experience, skills and your hook.</p></div>
+        <div class="feat"><span class="fi">🔗</span><h3>Share &amp; export</h3><p>Pixel-perfect PDF, editable Word file, plain text for job portals, and a private share link that shows how many times it was viewed.</p></div>
+        <div class="feat new"><span class="fi">⬆️</span><h3>Upload &amp; auto-fill</h3><p>Already have a resume? Upload a PDF or Word file and every section is filled in for you, ready to polish instead of retyping.</p></div>
+        <div class="feat new"><span class="fi">🤖</span><h3>AI writing assistant</h3><p>Claude AI writes your summary, rewrites bullets, tailors your resume to a job and reviews it like a senior recruiter. It never invents your numbers.</p></div>
+        <div class="feat new"><span class="fi">✉️</span><h3>Cover letters &amp; history</h3><p>Generate a matching cover letter for every application. Version history lets you restore any earlier draft in one click.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container ba-grid">
+      <div>
+        <span class="eyebrow">Recruiter Review</span>
+        <h2>From job duties to measurable impact</h2>
+        <p class="muted">Hiring managers at large companies shortlist on results, not responsibilities. Every bullet gets checked for a strong opening verb, a number and a readable length.</p>
+        <ul class="checks-list">
+          <li>Strong action verb at the start</li>
+          <li>A measurable result: %, ₹/$, time, users or team size</li>
+          <li>Under 30 words, so it fits in two lines</li>
+          <li>No "I / my", no clichés like "hardworking team player"</li>
+        </ul>
+      </div>
+      <div class="ba">
+        <div class="ba-card before"><span class="badge bad">Before</span><p>Responsible for managing the company's social media pages and helping with campaigns.</p><ul><li>Passive opener</li><li>No measurable result</li></ul></div>
+        <div class="ba-arrow">↓</div>
+        <div class="ba-card after"><span class="badge ok">After</span><p>Managed 4 social media channels and 12 campaigns, growing followers 3.2x (12K → 38K) in 6 months.</p><ul><li>Action verb</li><li>Scope + quantified outcome</li></ul></div>
+        <p class="small muted center">Example for illustration. You supply the real numbers; the tool never invents metrics.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="templates">
+    <div class="container">
+      <div class="sec-head"><span class="eyebrow">Templates</span><h2>Four templates built to pass ATS</h2><p class="muted">Single-column layout with real, selectable text. This is the format Workday, Taleo, Greenhouse, Lever and Naukri RMS read most reliably.</p></div>
+      <div class="tpl-grid" id="tplGrid"></div>
+    </div>
+  </section>
+
+  <section class="section alt" id="how">
+    <div class="container">
+      <div class="sec-head"><span class="eyebrow">How it works</span><h2>A recruiter-ready resume in three steps</h2></div>
+      <div class="steps">
+        <div class="step"><span class="num">1</span><h3>Choose your level</h3><p>Fresher, Experienced or Executive. Section order, tips and checks adjust to what recruiters expect at that level.</p></div>
+        <div class="step"><span class="num">2</span><h3>Write with live guidance</h3><p>Fill in your details while the Recruiter Score updates. Fix weak bullets in one click and paste a job description to tailor your keywords.</p></div>
+        <div class="step"><span class="num">3</span><h3>Export &amp; apply</h3><p>Download a PDF, a Word file or plain text, or share a private link. Duplicate the resume to tailor a copy for every application.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="container narrow">
+      <div class="sec-head"><span class="eyebrow">FAQ</span><h2>Questions, answered</h2></div>
+      <details class="faq"><summary>Will my resume pass ATS (Applicant Tracking Systems)?</summary><p>All templates use one column, standard section headings and real text, with no tables, text boxes or images. These are the formats ATS parsers handle best. Paste the job description into the Recruiter Lens to check keyword coverage too.</p></details>
+      <details class="faq"><summary>I am a fresher with no work experience. Can I still build a strong resume?</summary><p>Yes. Fresher mode puts Education, Skills and Projects first. It prompts for CGPA, internships, hackathons and leadership roles, and keeps the resume to one page, which is what campus and entry-level recruiters expect.</p></details>
+      <details class="faq"><summary>Is ResumeForge Pro free?</summary><p>Yes. The Free plan includes 3 resumes, all templates, PDF download, the Recruiter Score and 3 AI actions a day. Pro passes add more resumes and AI, with a one-time payment and no auto-renewal.</p></details>
+      <details class="faq"><summary>Should I add a photo, date of birth or marital status?</summary><p>Not for corporate or multinational roles. Large companies avoid these details to reduce bias, and they take up space. Your name, city, phone, email and LinkedIn are enough.</p></details>
+      <details class="faq"><summary>Where is my data stored?</summary><p>On our secure servers. Passwords are hashed and never stored in plain text. Share links are off until you turn them on, and you can export or delete all your data at any time from Account settings.</p></details>
+      <details class="faq"><summary>One page or two?</summary><p>Freshers and anyone with under 5 years of experience should aim for one page. Experienced professionals can use two. Executives may use up to three. The page counter and Recruiter Score warn you when you go over.</p></details>
+    </div>
+  </section>
+
+  <section class="section alt" id="pricing-teaser">
+    <div class="container">
+      <div class="sec-head"><span class="eyebrow">Pricing</span><h2>Free to start. Pro when you need more.</h2><p class="muted">No credit card to sign up. Pro is a one-time pass with no auto-renewal.</p></div>
+      <div class="teaser">
+        <div class="tz"><h3>Free</h3><p class="tz-price">₹0 <span>forever</span></p><p class="muted">3 resumes · all templates · PDF download · Recruiter Score · 3 AI actions a day</p><a class="btn block" href="/signup" data-auth-cta>Start free</a></div>
+        <div class="tz pro"><h3>Pro <span class="plan-chip pro">⭐ PRO</span></h3><p class="tz-price">from ₹{{PRICE_1M}} <span>one-time</span></p><p class="muted">50 resumes · 60 AI actions a day · AI cover letters · no branding on share links</p><a class="btn primary block" href="/pricing">See Pro plans</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="sec-head"><span class="eyebrow">Guides</span><h2>Free resume guides from recruiters' playbook</h2></div>
+      <div class="feature-list">
+        <a class="fl guide-link" href="/guides/how-to-write-a-resume"><h3>How to write a resume</h3><p>A step-by-step guide to every section, with before-and-after examples.</p></a>
+        <a class="fl guide-link" href="/guides/resume-action-verbs"><h3>150+ resume action verbs</h3><p>Replace "responsible for" with verbs that show impact, grouped by skill.</p></a>
+        <a class="fl guide-link" href="/guides/ats-friendly-resume"><h3>ATS-friendly resume guide</h3><p>How applicant tracking systems read resumes, and the checklist to pass them.</p></a>
+        <a class="fl guide-link" href="/resume-for-freshers"><h3>Resume for freshers</h3><p>The format campus and entry-level recruiters in India expect.</p></a>
+        <a class="fl guide-link" href="/resume-templates"><h3>ATS resume templates</h3><p>Four free, single-column templates and which one suits your industry.</p></a>
+        <a class="fl guide-link" href="/cover-letter-generator"><h3>Cover letter generator</h3><p>Turn your resume and the job description into a tailored cover letter.</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container">
+      <h2>Your next interview starts with a stronger resume.</h2>
+      <p>Free to start. Pick a sample for your career level and make it yours.</p>
+      <a class="btn lg cta-main light" href="/signup" data-auth-cta>Create my resume</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <a class="brand" href="/"><span class="logo">RF</span><div><b>ResumeForge Pro</b><small>Recruiter-grade resumes</small></div></a>
+          <p>AI resume builder with a live recruiter score, ATS-friendly templates and cover letters, for freshers, professionals and executives.</p>
+        </div>
+        <div><h4>Product</h4><ul>
+          <li><a href="/ai-resume-builder">AI Resume Builder</a></li>
+          <li><a href="/ats-resume-checker">ATS Resume Checker</a></li>
+          <li><a href="/resume-templates">Resume Templates</a></li>
+          <li><a href="/cover-letter-generator">Cover Letter Generator</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+        </ul></div>
+        <div><h4>Resources</h4><ul>
+          <li><a href="/guides/how-to-write-a-resume">How to Write a Resume</a></li>
+          <li><a href="/guides/resume-action-verbs">Resume Action Verbs</a></li>
+          <li><a href="/guides/ats-friendly-resume">ATS-Friendly Resume Guide</a></li>
+          <li><a href="/resume-for-freshers">Resume for Freshers</a></li>
+        </ul></div>
+        <div><h4>Company</h4><ul>
+          <li><a href="/contact">Contact us</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/refund">Refund Policy</a></li>
+        </ul></div>
+      </div>
+      <div class="foot-bottom"><span>© {{YEAR}} {{BUSINESS}}. All rights reserved.</span><span>Made for job seekers in India and worldwide.</span></div>
+    </div>
+  </footer>
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="/js/data.js?v={{V}}"></script>
+  <script src="/js/analyzer.js?v={{V}}"></script>
+  <script src="/js/templates.js?v={{V}}"></script>
+  <script src="/js/api.js?v={{V}}"></script>
+  <script src="/js/public.js?v={{V}}"></script>
+  <script src="/js/landing.js?v={{V}}"></script>
+</body>
+</html>

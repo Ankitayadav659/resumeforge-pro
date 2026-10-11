@@ -1,0 +1,8 @@
+.env
+data/
+__pycache__/
+*.pyc
+.claude/
+.git/
+*.bat
+Open ResumeForge.html

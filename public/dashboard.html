@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="/img/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/img/icon-180.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <script src="/js/theme.js?v={{V}}"></script>
+  <title>My resumes — ResumeForge Pro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/site.css?v={{V}}">
+  <link rel="stylesheet" href="/css/resume.css?v={{V}}">
+  <link rel="stylesheet" href="/css/dashboard.css?v={{V}}">
+</head>
+<body>
+  <header class="site-nav">
+    <div class="container">
+      <a class="brand" href="/"><span class="logo">RF</span><div><b>ResumeForge Pro</b><small>Recruiter-grade resumes</small></div></a>
+      <nav>
+        <button class="theme-btn" data-theme-toggle title="Switch light / dark mode" aria-label="Switch light or dark mode"><span class="t-light">🌙</span><span class="t-dark">☀️</span></button>
+        <button class="btn" data-action="upload" title="Upload existing resume">⬆<span class="hide-sm"> Upload existing resume</span></button>
+        <button class="btn primary" data-action="new">+<span class="hide-xs"> New resume</span></button>
+        <span id="userSlot"></span>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container dash">
+    <div id="loading" class="loader"><div class="spinner"></div>Loading your resumes…</div>
+    <div id="content" hidden>
+      <section class="welcome">
+        <div>
+          <h1 id="greeting">Welcome</h1>
+          <p class="muted">Keep one master resume, then duplicate and tailor a copy for each job you apply to.</p>
+        </div>
+        <div class="plan-box card" id="planBox"></div>
+      </section>
+      <section class="stats" id="stats"></section>
+      <section>
+        <div class="list-head"><h2>My resumes</h2><span class="muted" id="countLabel"></span></div>
+        <div class="resume-grid" id="grid"></div>
+      </section>
+      <section class="tips card">
+        <h3>What recruiters at large companies look for</h3>
+        <div class="tips-grid">
+          <div><b>1. Relevance in 6 seconds</b><p>A headline that matches the job title, plus your most recent role and best skills where the eye lands first.</p></div>
+          <div><b>2. Impact, not duties</b><p>Bullets that start with action verbs and end with numbers: %, ₹/$, time saved, users, team size.</p></div>
+          <div><b>3. ATS-friendly format</b><p>One column, standard headings, no photos or tables, and keywords that mirror the job description.</p></div>
+          <div><b>4. One tailored copy per job</b><p>Duplicate your master resume and adjust the headline, summary and skills for each application.</p></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div class="modal-backdrop" id="modal" hidden><div class="modal" id="modalBody"></div></div>
+  <div class="toast" id="toast" role="status"></div>
+  <input type="file" id="importFile" accept=".pdf,.docx,.txt,.json,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,text/plain,application/json" hidden>
+
+  <script src="/js/data.js?v={{V}}"></script>
+  <script src="/js/analyzer.js?v={{V}}"></script>
+  <script src="/js/templates.js?v={{V}}"></script>
+  <script src="/js/api.js?v={{V}}"></script>
+  <script src="/js/pdftext.js?v={{V}}"></script>
+  <script src="/js/billing.js?v={{V}}"></script>
+  <script src="/js/dashboard.js?v={{V}}"></script>
+</body>
+</html>

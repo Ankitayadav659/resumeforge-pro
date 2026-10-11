@@ -1,0 +1,36 @@
+# VPS deployment: ResumeForge Pro + Caddy (automatic HTTPS via Let's Encrypt).
+# Usage (on the server, from this folder):
+#   1. Point your domain's DNS A record to the server IP.
+#   2. Edit Caddyfile (replace resume.example.com) and ../.env (APP_URL, keys).
+#   3. docker compose up -d --build
+services:
+  app:
+    build: ..
+    restart: unless-stopped
+    env_file: ../.env
+    environment:
+      HOST: 0.0.0.0
+      TRUST_PROXY: "1"
+      COOKIE_SECURE: "1"
+    volumes:
+      - resumeforge-data:/data
+    expose:
+      - "8000"
+
+  caddy:
+    image: caddy:2
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    depends_on:
+      - app
+
+volumes:
+  resumeforge-data:
+  caddy-data:
+  caddy-config:

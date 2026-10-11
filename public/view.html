@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="/img/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/img/icon-180.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <script src="/js/theme.js?v={{V}}"></script>
+  <meta name="robots" content="noindex">
+  <title>Resume — ResumeForge Pro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/site.css?v={{V}}">
+  <link rel="stylesheet" href="/css/resume.css?v={{V}}">
+  <link rel="stylesheet" href="/css/view.css?v={{V}}">
+</head>
+<body>
+  <header class="view-bar no-print">
+    <div class="vb-left"><span class="logo">RF</span><div><b id="who">Resume</b><small id="updated" class="muted"></small></div></div>
+    <div class="vb-right">
+      <button class="theme-btn" data-theme-toggle title="Switch light / dark mode" aria-label="Switch light or dark mode"><span class="t-light">🌙</span><span class="t-dark">☀️</span></button>
+      <button class="btn" id="txtBtn" hidden>Plain text</button>
+      <button class="btn primary" id="pdfBtn" hidden>Download PDF</button>
+    </div>
+  </header>
+  <main class="view-main">
+    <div id="loading" class="loader no-print"><div class="spinner"></div>Loading resume…</div>
+    <div class="view-wrap" id="wrap" hidden><div class="scaler" id="scaler"><article class="page resume" id="page"></article></div></div>
+  </main>
+  <footer class="view-foot no-print">Made with <a href="/">ResumeForge Pro</a>, a recruiter-grade resume builder</footer>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="/js/data.js?v={{V}}"></script>
+  <script src="/js/analyzer.js?v={{V}}"></script>
+  <script src="/js/templates.js?v={{V}}"></script>
+  <script src="/js/api.js?v={{V}}"></script>
+  <script src="/js/pdfexport.js?v={{V}}"></script>
+  <script src="/js/view.js?v={{V}}"></script>
+</body>
+</html>
